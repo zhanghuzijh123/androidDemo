@@ -1,28 +1,42 @@
 package com.example.androiddemo;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.PopupWindow;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
     @BindView(R.id.btn1)
     Button button1;
     @BindView(R.id.btn2)
     Button button2;
     @BindView(R.id.btn3)
     Button button3;
-    private PopupWindow popupWindow;
+    @BindView(R.id.btn4)
+    Button button4;
+    @BindView(R.id.btn5)
+    Button button5;
+    @BindView(R.id.proTx)
+    TextView textView;
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
+    private int num=30;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,38 +44,117 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        initView();
+
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
+        button4.setOnClickListener(this);
+        button5.setOnClickListener(this);
+    }
+
+    private void initView() {
+        String n=num+"";
+        textView.setText(n);
+
+        ActionBar actionBar=getSupportActionBar();
+        if (actionBar!=null){
+            actionBar.hide();
+        }
+    }
+
+    //    标题菜单栏
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.add_item:
+                Toast.makeText(this,"addMenu",Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.remove_item:
+                Toast.makeText(this,"removeMenu",Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return true;
+    }
+
+//    得到下一个活动传上来的数据信息
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        switch (requestCode) {
+            case 1:
+                if (resultCode == RESULT_OK) {
+                    String name = data.getStringExtra("name");
+                    Log.i("MainActivity", "onActivityResult: " + name);
+                }
+                break;
+            default:
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn1:
-                ProgressDialog progressDialog=new ProgressDialog(MainActivity.this);
-                progressDialog.setTitle("nikoo!");
-                progressDialog.setMessage("lulu");
-                progressDialog.show();
+                num++;
+                progressBar.incrementProgressBy(1);
+                initView();
+//                ProgressDialog progressDialog=new ProgressDialog(MainActivity.this);
+//                progressDialog.setMax(100);
+//                progressDialog.setProgress(30);
+//                progressDialog.incrementProgressBy(1);
+//                progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+//                progressDialog.setTitle("nikoo!");
+//                progressDialog.setMessage("lulu");
+//                progressDialog.show();
                 break;
 
+//                隐式Intent跳转
             case R.id.btn2:
-                AlertDialog.Builder a=new AlertDialog.Builder(MainActivity.this);
-                a.setTitle("hello android");
-                a.setMessage("12312312");
-                a.show();
-                startActivity(new Intent(this,ListViewActivity.class));
+//                startActivity(new Intent("com.example.androiddemo.ACTION_INTENT"));
+                Intent intent=new Intent("com.example.androiddemo.ACTION_INTENT");
+                intent.putExtra("name","nikoo");
+                intent.putExtra("password","123456");
+                startActivity(intent);
                 break;
 
             case R.id.btn3:
-                startActivity(new Intent(this,ScrollViewActivity.class));
-                AlertDialog.Builder builder=new AlertDialog.Builder(this);
-                        builder.setTitle("nikoo");
-                        builder.setMessage("123");
-                        builder.show();
+                startActivityForResult(new Intent(this,Main3Activity.class),1);
+                break;
 
-                        popupWindow.dismiss();
-                        Button button=new Button(MainActivity.this);
+            case R.id.btn4:
+                startActivity(new Intent(this,ActivityLife.class));
+                break;
+
+//            case R.id.btn5:
+//                AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
+//                builder.setTitle("Hello dialog!");
+//                builder.setMessage("nikoo,this is a dialog");
+//                builder.setCancelable(false);
+//                builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                    }
+//                });
+//                builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                    }
+//                });
+//                builder.show();
+//                break;
+            case R.id.btn5:
+                startActivity(new Intent(this,ListViewActivity.class));
+                break;
         }
     }
 }
