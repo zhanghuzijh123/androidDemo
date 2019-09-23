@@ -6,7 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".RecyclerViewActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.example.androiddemo.tools.TitleLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="wrap_content">
+
+    </com.example.androiddemo.tools.TitleLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>
