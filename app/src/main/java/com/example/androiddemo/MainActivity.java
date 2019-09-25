@@ -36,6 +36,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button button6;
     @BindView(R.id.btn7)
     Button button7;
+    @BindView(R.id.btn8)
+    Button button8;
     @BindView(R.id.proTx)
     TextView textView;
     @BindView(R.id.progressBar)
@@ -57,6 +59,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         button5.setOnClickListener(this);
         button6.setOnClickListener(this);
         button7.setOnClickListener(this);
+        button8.setOnClickListener(this);
     }
 
     private void initView() {
@@ -168,6 +171,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
             case R.id.btn7:
                 startActivity(new Intent(this,BroadcastReceiverActivity.class));
+                break;
+
+            case R.id.btn8:
+                startActivity(new Intent(this,NotificationActivity.class));
         }
     }
 }

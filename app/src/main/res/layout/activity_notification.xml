@@ -5,12 +5,11 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BroadcastReceiverActivity">
-
+    tools:context=".NotificationActivity">
 
     <Button
-        android:id="@+id/broadcastBtn"
-        android:text="广播"
+        android:id="@+id/notificationBtn"
+        android:text="发送通知"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>
