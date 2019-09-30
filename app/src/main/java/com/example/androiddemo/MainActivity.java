@@ -38,6 +38,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button button7;
     @BindView(R.id.btn8)
     Button button8;
+    @BindView(R.id.btn9)
+    Button button9;
+    @BindView(R.id.btn10)
+    Button button10;
+    @BindView(R.id.btn11)
+    Button button11;
+    @BindView(R.id.btn12)
+    Button button12;
+    @BindView(R.id.btn13)
+    Button button13;
     @BindView(R.id.proTx)
     TextView textView;
     @BindView(R.id.progressBar)
@@ -60,6 +70,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         button6.setOnClickListener(this);
         button7.setOnClickListener(this);
         button8.setOnClickListener(this);
+        button9.setOnClickListener(this);
+        button10.setOnClickListener(this);
+        button11.setOnClickListener(this);
+        button12.setOnClickListener(this);
+        button13.setOnClickListener(this);
     }
 
     private void initView() {
@@ -175,6 +190,27 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
             case R.id.btn8:
                 startActivity(new Intent(this,NotificationActivity.class));
+                break;
+
+            case R.id.btn9:
+                startActivity(new Intent(this,WebViewActivity.class));
+                break;
+
+            case R.id.btn10:
+                startActivity(new Intent(this,HttpActivity.class));
+                break;
+
+            case R.id.btn11:
+                startActivity(new Intent(this,OKHttpActivity.class));
+                break;
+
+            case R.id.btn12:
+                startActivity(new Intent(this,MessageActivity.class));
+                break;
+
+            case R.id.btn13:
+                startActivity(new Intent(this,ServiceActivity.class));
+                break;
         }
     }
 }

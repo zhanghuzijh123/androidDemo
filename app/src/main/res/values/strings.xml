@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">androidDemo</string>
+    <string name="title_activity_async_task">AsyncTaskActivity</string>
 </resources>

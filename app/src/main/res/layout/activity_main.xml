@@ -90,5 +90,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    
+    <Button
+        android:id="@+id/btn9"
+        android:text="WebView测试"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn10"
+        android:text="使用HTTP协议访问网络(error)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn11"
+        android:text="使用OKHTTP协议访问网络"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn12"
+        android:text="异步消息处理机制"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn13"
+        android:text="探究服务"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
