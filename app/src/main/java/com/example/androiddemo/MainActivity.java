@@ -48,6 +48,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button button12;
     @BindView(R.id.btn13)
     Button button13;
+    @BindView(R.id.btn14)
+    Button button14;
+    @BindView(R.id.btn15)
+    Button button15;
     @BindView(R.id.proTx)
     TextView textView;
     @BindView(R.id.progressBar)
@@ -75,6 +79,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         button11.setOnClickListener(this);
         button12.setOnClickListener(this);
         button13.setOnClickListener(this);
+        button14.setOnClickListener(this);
+        button15.setOnClickListener(this);
     }
 
     private void initView() {
@@ -210,6 +216,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
             case R.id.btn13:
                 startActivity(new Intent(this,ServiceActivity.class));
+                break;
+
+            case R.id.btn14:
+                startActivity(new Intent(this,ToolBarActivity.class));
+                break;
+
+            case R.id.btn15:
+                startActivity(new Intent(this,BaiduMap.class));
                 break;
         }
     }
