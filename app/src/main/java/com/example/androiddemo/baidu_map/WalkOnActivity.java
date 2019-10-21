@@ -191,6 +191,8 @@ public class WalkOnActivity extends AppCompatActivity {
                             walkEndNode.setLocation(endPt);
                             mParam=new WalkNaviLaunchParam().startNodeInfo(walkStartNode).endNodeInfo(walkEndNode);
 
+//                          设置步行导航模式
+//                          extraNaviMode - 0：普通步行导航；1：AR步行导航
                             mParam.extraNaviMode(0);
                             initWalk();
                         }
