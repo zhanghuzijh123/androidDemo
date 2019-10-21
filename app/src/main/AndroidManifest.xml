@@ -8,9 +8,17 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 这个权限用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 这个权限用于访问GPS定位 -->
     <!-- 这个权限用于访问GPS定位 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 获取访问手机振动器权限，用于导航过程中的震动提示 -->
-    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 获取摄像头权限，用于AR步行导航 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 获取访问手机振动器权限，用于导航过程中的震动提示 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 获取摄像头权限，用于AR步行导航 -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 获取允许应用程序更改Wi-Fi连接状态的权限，用于室内步行导航wifi定位,如果不需要室内步行导航功能则该权限无需申请 -->
+    <uses-permission android:name="android.Manifest.permission.CHANGE_WIFI_STATE" />
+    <!-- OpenGLES 2.0 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <application
         android:name=".baidu_map.DemoApplication"
@@ -20,7 +28,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".baidu_map.WalkOnActivity"></activity>
+        <activity android:name=".baidu_map.BaiduDemoActivity"></activity>
+        <activity android:name=".baidu_map.WalkOnActivity" />
         <activity android:name=".baidu_map.BaiduRouteActivity" />
         <activity android:name=".baidu_map.POIActivity" />
         <activity android:name=".baidu_map.MessageActivity" />
@@ -28,6 +37,7 @@
         <activity android:name=".BaiduMap" />
         <activity android:name=".ToolBarActivity" />
         <activity android:name=".ServiceActivity" />
+        <activity android:name=".baidu_map.WNaviGuideActivity" />
 
         <service
             android:name=".MyService"

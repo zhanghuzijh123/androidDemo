@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.androiddemo.baidu_map.BaiduDemoActivity;
 import com.example.androiddemo.baidu_map.BaiduRouteActivity;
 import com.example.androiddemo.baidu_map.POIActivity;
 import com.example.androiddemo.baidu_map.ShowBaiduMap;
@@ -24,6 +25,8 @@ public class BaiduMap extends AppCompatActivity implements View.OnClickListener 
     Button map_btn3;
     @BindView(R.id.map_btn4)
     Button map_btn4;
+    @BindView(R.id.map_btn5)
+    Button map_btn5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class BaiduMap extends AppCompatActivity implements View.OnClickListener 
         map_btn2.setOnClickListener(this);
         map_btn3.setOnClickListener(this);
         map_btn4.setOnClickListener(this);
+        map_btn5.setOnClickListener(this);
     }
 
     @Override
@@ -54,6 +58,10 @@ public class BaiduMap extends AppCompatActivity implements View.OnClickListener 
 
             case R.id.map_btn4:
                 startActivity(new Intent(this, WalkOnActivity.class));
+                break;
+
+            case R.id.map_btn5:
+                startActivity(new Intent(this, BaiduDemoActivity.class));
                 break;
         }
     }

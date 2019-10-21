@@ -29,4 +29,10 @@
         android:text="路线导航"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/map_btn5"
+        android:text="百度Demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
