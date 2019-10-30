@@ -18,6 +18,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.androiddemo.getui.DemoIntentService;
+import com.example.androiddemo.getui.DemoPushService;
+import com.igexin.sdk.PushManager;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -52,6 +56,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button button14;
     @BindView(R.id.btn15)
     Button button15;
+    @BindView(R.id.btn16)
+    Button button16;
+    @BindView(R.id.btn17)
+    Button button17;
     @BindView(R.id.proTx)
     TextView textView;
     @BindView(R.id.progressBar)
@@ -64,8 +72,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        initView();
+//        个推初始化
+        PushManager.getInstance().initialize(getApplicationContext(), DemoPushService.class);
+//        在个推SDK初始化后，注册上述 IntentService 类
+        PushManager.getInstance().registerPushIntentService(getApplicationContext(), DemoIntentService.class);
 
+        initView();
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
@@ -81,6 +93,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         button13.setOnClickListener(this);
         button14.setOnClickListener(this);
         button15.setOnClickListener(this);
+        button16.setOnClickListener(this);
+        button17.setOnClickListener(this);
     }
 
     private void initView() {
@@ -224,6 +238,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
             case R.id.btn15:
                 startActivity(new Intent(this,BaiduMap.class));
+                break;
+
+            case R.id.btn16:
+                startActivity(new Intent(this,ConstraintLayoutActivity.class));
+                break;
+
+            case R.id.btn17:
+                startActivity(new Intent(this,AnimationActivity.class));
                 break;
         }
     }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".animation.PropertyAnimActivity">
+
+    <Button
+        android:id="@+id/propertyAnimBtn"
+        android:text="属性动画-ValueAnimator类的ofInt()"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/propertyAnimText"
+        android:text="属性动画"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:background="#000"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/propertyAnimBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/propertyAnimBtn1"
+        android:text="属性动画-ValueAnimator类的ofObject()"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/propertyAnimText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

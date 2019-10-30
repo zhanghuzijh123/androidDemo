@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".animation.ViewAnimActivity">
+
+    <Button
+        android:id="@+id/viewAnimBtn"
+        android:text="view动画-平移"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/viewAnimBtn1"
+        android:text="view动画-缩放"
+        app:layout_constraintTop_toBottomOf="@id/viewAnimBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/viewAnimBtn2"
+        android:text="view动画-旋转"
+        app:layout_constraintTop_toBottomOf="@id/viewAnimBtn1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/viewAnimBtn3"
+        android:text="view动画-透明度"
+        app:layout_constraintTop_toBottomOf="@id/viewAnimBtn2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/viewAnimTx"
+        android:text="view动画"
+        android:textSize="20dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/viewAnimBtn3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>
