@@ -27,7 +27,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         arys=new ArrayList<>();
-        for (int i=0;i<10;i++){
+        for (int i=0;i<10000;i++){
             arys.add("content"+i);
         }
         recyclerViewAdapter=new RecyclerViewAdapter(this,arys);

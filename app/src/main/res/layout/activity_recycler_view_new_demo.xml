@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newdemo.NewDemoMainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/gaojin_spinner"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/gaojin_editText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/spinner_new_style"
+            android:entries="@array/test"
+            app:layout_constraintHorizontal_weight="5"
+            android:layout_marginRight="5dp"
+            android:layout_width="0dp"
+            android:layout_height="35dp"></Spinner>
+
+        <EditText
+            android:id="@+id/gaojin_editText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/gaojin_spinner"
+            app:layout_constraintRight_toLeftOf="@id/gaojin_imageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:hint="输入设备编号"
+            android:textSize="16dp"
+            app:layout_constraintHorizontal_weight="4"
+            android:background="@drawable/edittext_new_style"
+            android:layout_marginRight="5dp"
+            android:layout_width="0dp"
+            android:layout_height="35dp" />
+
+        <ImageView
+            android:id="@+id/gaojin_imageView"
+            android:src="@mipmap/icon_search"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/gaojin_editText"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/gaojin_srl"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gaojin_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <com.example.androiddemo.tools.TitleLayout
+        android:paddingBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -151,6 +152,30 @@
             <Button
                 android:id="@+id/btn17"
                 android:text="android动画"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn18"
+                android:text="Zxing二维码"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn19"
+                android:text="service生命周期-new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn21"
+                android:text="recyclerView下拉刷新"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn22"
+                android:text="recyclerView上拉加载更多"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>

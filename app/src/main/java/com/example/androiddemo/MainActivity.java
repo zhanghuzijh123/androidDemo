@@ -3,10 +3,6 @@ package com.example.androiddemo;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -60,6 +56,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button button16;
     @BindView(R.id.btn17)
     Button button17;
+    @BindView(R.id.btn18)
+    Button button18;
+    @BindView(R.id.btn19)
+    Button button19;
+    @BindView(R.id.btn21)
+    Button button21;
+    @BindView(R.id.btn22)
+    Button button22;
     @BindView(R.id.proTx)
     TextView textView;
     @BindView(R.id.progressBar)
@@ -95,16 +99,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         button15.setOnClickListener(this);
         button16.setOnClickListener(this);
         button17.setOnClickListener(this);
+        button18.setOnClickListener(this);
+        button19.setOnClickListener(this);
+        button21.setOnClickListener(this);
+        button22.setOnClickListener(this);
     }
 
     private void initView() {
         String n=num+"";
         textView.setText(n);
-
-        ActionBar actionBar=getSupportActionBar();
-        if (actionBar!=null){
-            actionBar.hide();
-        }
     }
 
     //    标题菜单栏
@@ -246,6 +249,22 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
             case R.id.btn17:
                 startActivity(new Intent(this,AnimationActivity.class));
+                break;
+
+            case R.id.btn18:
+                startActivity(new Intent(this,ZxingActivity.class));
+                break;
+
+            case R.id.btn19:
+                startActivity(new Intent(this,ServiceNewActivity.class));
+                break;
+
+            case R.id.btn21:
+                startActivity(new Intent(this,RecyclerViewNewActivity.class));
+                break;
+
+            case R.id.btn22:
+                startActivity(new Intent(this,RecyclerViewNewDemo.class));
                 break;
         }
     }

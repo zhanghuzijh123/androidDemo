@@ -11,9 +11,9 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [
-                GETUI_APP_ID : "oGXYd9NsU36zOCWQ5pgPe2",
-                GETUI_APP_KEY : "G5m5LvS8Vn88CWw8oQ50l7",
-                GETUI_APP_SECRET : "DsSUhvCcvgAdqjNQDWrEj7"
+                GETUI_APP_ID    : "oGXYd9NsU36zOCWQ5pgPe2",
+                GETUI_APP_KEY   : "G5m5LvS8Vn88CWw8oQ50l7",
+                GETUI_APP_SECRET: "DsSUhvCcvgAdqjNQDWrEj7"
         ]
 
         ndk {
@@ -53,4 +53,8 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.2.0")
     implementation files('libs\\BaiduLBS_Android.jar')
     implementation 'com.getui:sdk:2.13.3.0'
+    implementation 'com.google.zxing:core:3.3.0'
+
+    api 'com.google.zxing:android-core:3.3.0'
+    api 'com.google.zxing:core:3.3.2'
 }

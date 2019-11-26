@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/gaojinBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/gaojin1"
+            android:text="智能井盖控制器"
+            android:textSize="18dp"
+            android:textColor="@color/textColor_1"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/gaojin2"
+            android:textSize="18dp"
+            android:textColor="@color/textColor_1"
+            android:text="控制器编号"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:src="@drawable/button1"
+            android:layout_marginRight="15dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+        <TextView
+            android:id="@+id/gaojin3"
+            android:textSize="15dp"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="center"
+            android:text="井盖异常"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:src="@drawable/button3"
+            android:layout_marginRight="15dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+        <TextView
+            android:id="@+id/gaojin4"
+            android:layout_gravity="center"
+            android:text="2019-08-06  20:20:20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/gaojin5"
+        android:layout_marginTop="10dp"
+        android:text="undefined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/gaojin_map"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"></com.baidu.mapapi.map.MapView>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+        <Button
+            android:id="@+id/gaojin_btn1"
+            android:background="@drawable/button_new_style2"
+            android:textColor="@color/white"
+            android:text="位置"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/gaojin_btn2"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_new_style2"
+            android:textColor="@color/white"
+            android:text="告警处理"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/gaojin_btn3"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_new_style2"
+            android:textColor="@color/white"
+            android:text="设备详情"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+    </LinearLayout>
+</LinearLayout>

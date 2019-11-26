@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ServiceNewActivity">
+
+    <TextView
+        android:id="@+id/serviceTx"
+        android:text="service生命周期"
+        android:gravity="center"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/serviceBtn1"
+        android:text="开始服务"
+        app:layout_constraintTop_toBottomOf="@id/serviceTx"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/serviceBtn2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/serviceBtn2"
+        android:text="停止服务"
+        app:layout_constraintTop_toBottomOf="@id/serviceTx"
+        app:layout_constraintLeft_toRightOf="@id/serviceBtn1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/serviceBtn3"
+        android:text="绑定服务"
+        app:layout_constraintTop_toBottomOf="@id/serviceBtn1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/serviceBtn4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/serviceBtn4"
+        android:text="解除服务"
+        app:layout_constraintTop_toBottomOf="@id/serviceBtn1"
+        app:layout_constraintLeft_toRightOf="@id/serviceBtn3"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/serviceBtn5"
+        android:text="调用服务内部方法"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/serviceBtn3"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>

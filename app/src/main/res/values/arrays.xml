@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="test">
+        <item>选择产品类型</item>
+        <item>智能井盖类型</item>
+        <item>地磁检测器</item>
+        <item>NB烟雾感应器</item>
+    </string-array>
+</resources>
