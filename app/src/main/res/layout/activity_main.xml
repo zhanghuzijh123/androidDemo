@@ -132,12 +132,6 @@
                 android:layout_height="wrap_content" />
 
             <Button
-                android:id="@+id/btn14"
-                android:text="toolBar的测试"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <Button
                 android:id="@+id/btn15"
                 android:text="百度地图测试"
                 android:layout_width="match_parent"
@@ -168,6 +162,12 @@
                 android:layout_height="wrap_content" />
 
             <Button
+                android:id="@+id/btn20"
+                android:text="df我的"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
                 android:id="@+id/btn21"
                 android:text="recyclerView下拉刷新"
                 android:layout_width="match_parent"
@@ -176,6 +176,36 @@
             <Button
                 android:id="@+id/btn22"
                 android:text="recyclerView上拉加载更多"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn23"
+                android:text="android程序更新"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn24"
+                android:text="android相册选取图片"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn25"
+                android:text="android轮播图"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn26"
+                android:text="android集成Lottie动画插件"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn27"
+                android:text="购物车实现"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>

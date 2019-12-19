@@ -1,7 +1,6 @@
 package com.example.androiddemo;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +21,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
+    private static final String TAG = "MainActivity.class";
     @BindView(R.id.btn1)
     Button button1;
     @BindView(R.id.btn2)
@@ -48,8 +48,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button button12;
     @BindView(R.id.btn13)
     Button button13;
-    @BindView(R.id.btn14)
-    Button button14;
     @BindView(R.id.btn15)
     Button button15;
     @BindView(R.id.btn16)
@@ -60,10 +58,22 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button button18;
     @BindView(R.id.btn19)
     Button button19;
+    @BindView(R.id.btn20)
+    Button button20;
     @BindView(R.id.btn21)
     Button button21;
     @BindView(R.id.btn22)
     Button button22;
+    @BindView(R.id.btn23)
+    Button button23;
+    @BindView(R.id.btn24)
+    Button button24;
+    @BindView(R.id.btn25)
+    Button button25;
+    @BindView(R.id.btn26)
+    Button button26;
+    @BindView(R.id.btn27)
+    Button button27;
     @BindView(R.id.proTx)
     TextView textView;
     @BindView(R.id.progressBar)
@@ -95,14 +105,19 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         button11.setOnClickListener(this);
         button12.setOnClickListener(this);
         button13.setOnClickListener(this);
-        button14.setOnClickListener(this);
         button15.setOnClickListener(this);
         button16.setOnClickListener(this);
         button17.setOnClickListener(this);
         button18.setOnClickListener(this);
         button19.setOnClickListener(this);
+        button20.setOnClickListener(this);
         button21.setOnClickListener(this);
         button22.setOnClickListener(this);
+        button23.setOnClickListener(this);
+        button24.setOnClickListener(this);
+        button25.setOnClickListener(this);
+        button26.setOnClickListener(this);
+        button27.setOnClickListener(this);
     }
 
     private void initView() {
@@ -235,10 +250,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(new Intent(this,ServiceActivity.class));
                 break;
 
-            case R.id.btn14:
-                startActivity(new Intent(this,ToolBarActivity.class));
-                break;
-
             case R.id.btn15:
                 startActivity(new Intent(this,BaiduMap.class));
                 break;
@@ -259,12 +270,41 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(new Intent(this,ServiceNewActivity.class));
                 break;
 
+            case R.id.btn20:
+                startActivity(new Intent(this,Dfmy.class));
+                break;
+
             case R.id.btn21:
                 startActivity(new Intent(this,RecyclerViewNewActivity.class));
                 break;
 
             case R.id.btn22:
                 startActivity(new Intent(this,RecyclerViewNewDemo.class));
+                break;
+
+            case R.id.btn23:
+                Log.d(TAG, "onClick: "+"版本更新");
+                startActivity(new Intent(this,VersionUpdateActivity.class));
+                break;
+
+            case R.id.btn24:
+                Log.d(TAG, "图片选取");
+                startActivity(new Intent(this,PhotoChooseActivity.class));
+                break;
+
+            case R.id.btn25:
+                Log.d(TAG, "android轮播图");
+                startActivity(new Intent(this,LooperPageActivity.class));
+                break;
+
+            case R.id.btn26:
+                Log.d(TAG, "Lottie动画插件");
+                startActivity(new Intent(this,LottieActivity.class));
+                break;
+
+            case R.id.btn27:
+                Log.d(TAG, "购物车实现");
+                startActivity(new Intent(this,ShoppingCarActivity.class));
                 break;
         }
     }
